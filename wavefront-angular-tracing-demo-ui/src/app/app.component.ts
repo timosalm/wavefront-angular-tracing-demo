@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppService } from './app.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'wavefront-angular-tracing-demo-ui';
+
+  constructor(private appService: AppService) {
+  }
+
+  sendRequest() {
+    this.appService.sendRequest().subscribe((text) => {
+      console.log(text);
+    });
+  }
 }
