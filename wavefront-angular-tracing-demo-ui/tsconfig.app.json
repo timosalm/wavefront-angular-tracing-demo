@@ -4,19 +4,12 @@
   "compilerOptions": {
     "outDir": "./out-tsc/app",
     "types": [],
-    "paths": {
-      "http": [
-        "node_modules/empty/index.js"
-      ],
-      "https": [
-        "node_modules/empty/index.js"
-      ],
-      "os": [
-        "node_modules/empty/index.js"
-      ],
-      "node-fetch": [
-        "node_modules/empty/index.js"
-      ]
+    "paths" : {
+      "http": ["./node_modules/stream-http"],
+      "https": ["./node_modules/https-browserify"],
+      "process": ["./node_modules/process"],
+      "os": ["./node_modules/os-browserify"],
+      "url": ["./node_modules/url"]
     }
   },
   "files": [

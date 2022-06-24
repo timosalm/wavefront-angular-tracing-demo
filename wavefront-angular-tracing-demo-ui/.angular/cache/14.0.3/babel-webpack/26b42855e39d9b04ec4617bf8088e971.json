@@ -1,0 +1,1 @@
+{"ast":null,"code":"'use strict';\n\nmodule.exports = function (value) {\n  return function () {\n    return value;\n  };\n};\n\nif ('production' != process.env.NODE_ENV) {\n  Object.freeze(module.exports);\n}","map":null,"metadata":{},"sourceType":"script"}
